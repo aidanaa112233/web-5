@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popeyes | Contact Us</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            POPEYES<span class="brand-dot">.</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-orange ms-lg-3" href="#register">
+                        Join Our Club
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="page-header">
+    <div class="container text-center">
+        <span class="section-label">WE'D LOVE TO HEAR FROM YOU</span>
+        <h1 class="page-title">CONTACT US</h1>
+        <p>
+            Have a question or feedback?
+            Send us a message or join our club!
+        </p>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="row g-5 align-items-start">
+
+            <div class="col-lg-5">
+                <span class="section-label">GET IN TOUCH</span>
+
+                <h2 class="section-title">
+                    Let's Talk About Something Delicious!
+                </h2>
+
+                <p class="about-text">
+                    We are happy to hear your questions,
+                    suggestions and feedback about our
+                    Popeyes student project.
+                </p>
+
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">💬</div>
+                    <div>
+                        <h4>Send Feedback</h4>
+                        <p>
+                            Share your ideas and suggestions
+                            through our contact form.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">🍗</div>
+                    <div>
+                        <h4>Discover Our Menu</h4>
+                        <p>
+                            Explore our delicious chicken
+                            and Louisiana-inspired food.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">🎓</div>
+                    <div>
+                        <h4>Student Project</h4>
+                        <p>
+                            Created for Frontend Development
+                            by students of group SE-2511.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-image-wrapper mt-4">
+                    <img src="images/sandwich.avif"
+                         alt="Popeyes Chicken Sandwich"
+                         class="img-fluid rounded-4">
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="premium-form-card">
+
+                    <span class="section-label">SEND A MESSAGE</span>
+                    <h2 class="form-title">Contact Form</h2>
+
+                    <p class="text-muted mb-4">
+                        Fill out the form below.
+                        All fields are required.
+                    </p>
+
+                    <form id="contactForm" novalidate>
+
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">
+                                Full Name
+                            </label>
+
+                            <input type="text"
+                                   class="form-control"
+                                   id="contactName"
+                                   placeholder="Enter your full name">
+
+                            <small class="error-message"
+                                   id="contactNameError"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">
+                                Email Address
+                            </label>
+
+                            <input type="email"
+                                   class="form-control"
+                                   id="contactEmail"
+                                   placeholder="example@gmail.com">
+
+                            <small class="error-message"
+                                   id="contactEmailError"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contactSubject" class="form-label">
+                                Subject
+                            </label>
+
+                            <select class="form-select" id="contactSubject">
+                                <option value="">Choose a subject</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="question">General Question</option>
+                                <option value="menu">Menu Question</option>
+                                <option value="other">Other</option>
+                            </select>
+
+                            <small class="error-message"
+                                   id="contactSubjectError"></small>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="contactMessage" class="form-label">
+                                Your Message
+                            </label>
+
+                            <textarea class="form-control"
+                                      id="contactMessage"
+                                      rows="5"
+                                      placeholder="Write your message here..."></textarea>
+
+                            <small class="error-message"
+                                   id="contactMessageError"></small>
+                        </div>
+
+                        <p id="contactSuccess"
+                           class="success-message"
+                           role="status"
+                           aria-live="polite"></p>
+
+                        <button type="submit"
+                                class="btn btn-orange btn-lg w-100">
+                            Send Message →
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section-padding registration-section" id="register">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-label">BECOME PART OF OUR FAMILY</span>
+
+            <h2 class="section-title">
+                Join the Popeyes Club
+            </h2>
+
+            <p class="section-description">
+                Create a demo account and experience
+                our interactive registration form.
+            </p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-md-9">
+
+                <div class="premium-form-card">
+
+                    <h3 class="form-title text-center mb-4">
+                        Create Your Account
+                    </h3>
+
+                    <form id="registrationForm" novalidate>
+
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">
+                                Full Name
+                            </label>
+
+                            <input type="text"
+                                   id="registerName"
+                                   class="form-control"
+                                   placeholder="Enter your name"
+                                   autocomplete="name">
+
+                            <small class="error-message"
+                                   id="registerNameError"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">
+                                Email Address
+                            </label>
+
+                            <input type="email"
+                                   id="registerEmail"
+                                   class="form-control"
+                                   placeholder="example@gmail.com"
+                                   autocomplete="email">
+
+                            <small class="error-message"
+                                   id="registerEmailError"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">
+                                Password
+                            </label>
+
+                            <input type="password"
+                                   id="registerPassword"
+                                   class="form-control"
+                                   placeholder="At least 8 characters"
+                                   autocomplete="new-password">
+
+                            <small class="error-message"
+                                   id="registerPasswordError"></small>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="confirmPassword" class="form-label">
+                                Confirm Password
+                            </label>
+
+                            <input type="password"
+                                   id="confirmPassword"
+                                   class="form-control"
+                                   placeholder="Repeat your password"
+                                   autocomplete="new-password">
+
+                            <small class="error-message"
+                                   id="confirmPasswordError"></small>
+                        </div>
+
+                        <p id="registrationSuccess"
+                           class="success-message"
+                           role="status"
+                           aria-live="polite"></p>
+
+                        <button type="submit"
+                                class="btn btn-orange btn-lg w-100">
+                            Create Account →
+                        </button>
+
+                        <p class="text-muted text-center mt-3 mb-0 small">
+                            This is a demo registration form
+                            for educational purposes only.
+                            No account is created.
+                        </p>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="offer-section">
+    <div class="container">
+        <div class="row align-items-center g-4">
+
+            <div class="col-lg-8">
+                <span class="offer-label">STAY CONNECTED</span>
+
+                <h2>
+                    GOOD FOOD.<br>
+                    GREAT CONNECTIONS.
+                </h2>
+
+                <p>
+                    Thank you for visiting our Popeyes
+                    student project website!
+                </p>
+
+                <a href="menu.html" class="btn btn-light btn-lg">
+                    Explore Our Menu →
+                </a>
+            </div>
+
+            <div class="col-lg-4 text-center">
+                <img src="images/tenders.avif"
+                     alt="Popeyes Chicken Tenders"
+                     class="img-fluid offer-image">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-5">
+                <h3 class="footer-brand">POPEYES.</h3>
+                <p>
+                    A student web development project
+                    inspired by Louisiana-style chicken.
+                </p>
+            </div>
+
+            <div class="col-md-3">
+                <h4>Explore</h4>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="col-md-4">
+                <h4>Our Team</h4>
+                <p>Tumenbay Aidana</p>
+                <p>Mussabekuly Kuanysh</p>
+                <p>Group: SE-2511</p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="text-center mb-0">
+            © 2026 Popeyes Student Project.
+            Educational purposes only.
+            Team Members: Tumenbay Aidana and Mussabekuly Kuanysh.
+        </p>
+
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

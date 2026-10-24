@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popeyes | Our Menu</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            POPEYES<span class="brand-dot">.</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-orange ms-lg-3" href="contact.html">
+                        Contact Us
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container text-center">
+        <span class="section-label">FRESH & DELICIOUS</span>
+        <h1 class="page-title">OUR MENU</h1>
+        <p>
+            Discover your next favorite meal.
+            Crispy chicken, bold flavors and delicious sides.
+        </p>
+    </div>
+</section>
+
+<!-- ASSIGNMENT 5: INTERACTIVE MENU -->
+<section class="section-padding" id="interactiveMenu">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-label">EXPLORE MORE</span>
+            <h2 class="section-title">Build Your Perfect Meal</h2>
+            <p class="section-description">
+                Choose a category, discover delicious food,
+                and rate your favorites!
+            </p>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="text-center mb-4">
+            <h4>Choose Your Category</h4>
+
+            <button type="button"
+                    class="btn btn-orange m-2 menu-filter-btn active"
+                    data-category="all">
+                All Products
+            </button>
+
+            <button type="button"
+                    class="btn btn-outline-dark m-2 menu-filter-btn"
+                    data-category="chicken">
+                Chicken
+            </button>
+
+            <button type="button"
+                    class="btn btn-outline-dark m-2 menu-filter-btn"
+                    data-category="burger">
+                Burgers
+            </button>
+
+            <button type="button"
+                    class="btn btn-outline-dark m-2 menu-filter-btn"
+                    data-category="sides">
+                Sides
+            </button>
+
+            <button type="button"
+                    class="btn btn-outline-dark m-2 menu-filter-btn"
+                    data-category="drinks">
+                Drinks
+            </button>
+        </div>
+
+        <!-- Search -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6">
+                <input
+                    type="text"
+                    class="form-control form-control-lg"
+                    id="menuSearch"
+                    placeholder="Search your favorite food..."
+                    aria-label="Search food">
+            </div>
+        </div>
+
+        <!-- Dynamic Products -->
+        <div class="row g-4" id="dynamicMenu">
+            <!-- Products will be displayed by JavaScript -->
+        </div>
+
+        <!-- Product Counter -->
+        <p class="text-center mt-4"
+           id="productCount"
+           aria-live="polite">
+            Loading products...
+        </p>
+
+        <!-- Rating -->
+        <div class="text-center mt-5">
+            <h3>Rate Your Popeyes Experience!</h3>
+            <p>How much do you love our food?</p>
+
+            <div id="ratingStars" class="rating-stars">
+                <button type="button" class="rating-star"
+                        data-rating="1" aria-label="Rate 1 star">★</button>
+                <button type="button" class="rating-star"
+                        data-rating="2" aria-label="Rate 2 stars">★</button>
+                <button type="button" class="rating-star"
+                        data-rating="3" aria-label="Rate 3 stars">★</button>
+                <button type="button" class="rating-star"
+                        data-rating="4" aria-label="Rate 4 stars">★</button>
+                <button type="button" class="rating-star"
+                        data-rating="5" aria-label="Rate 5 stars">★</button>
+            </div>
+
+            <p id="ratingMessage" class="mt-3" aria-live="polite">
+                Select your rating!
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ORIGINAL MENU -->
+<section class="section-padding">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-label">MADE WITH LOVE</span>
+            <h2 class="section-title">Explore Our Favorites</h2>
+            <p class="section-description">
+                From our famous chicken sandwich to our crispy sides.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="food-card">
+                    <div class="food-image-box">
+                        <span class="food-tag">BESTSELLER</span>
+                        <img src="images/sandwich.avif"
+                             alt="Chicken Sandwich Combo">
+                    </div>
+
+                    <div class="food-card-body">
+                        <h3>Chicken Sandwich Combo</h3>
+                        <p>
+                            Crispy chicken fillet with pickles,
+                            signature sauce and delicious flavor.
+                        </p>
+
+                        <div class="food-card-bottom">
+                            <span class="price">3,200 ₸</span>
+                            <span class="menu-portion">Large</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="food-card">
+                    <div class="food-image-box">
+                        <span class="food-tag">SPICY</span>
+                        <img src="images/tenders.avif"
+                             alt="Spicy Chicken Tenders">
+                    </div>
+
+                    <div class="food-card-body">
+                        <h3>Spicy Chicken Tenders</h3>
+                        <p>
+                            Tender chicken strips with a crispy
+                            coating and Louisiana-style spices.
+                        </p>
+
+                        <div class="food-card-bottom">
+                            <span class="price">2,400 ₸</span>
+                            <span class="menu-portion">5 pcs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="food-card">
+                    <div class="food-image-box">
+                        <span class="food-tag">POPULAR</span>
+                        <img src="images/wings.avif"
+                             alt="Chicken Wings">
+                    </div>
+
+                    <div class="food-card-body">
+                        <h3>Chicken Wings</h3>
+                        <p>
+                            Golden crispy wings with a delicious
+                            spicy flavor and crunchy texture.
+                        </p>
+
+                        <div class="food-card-bottom">
+                            <span class="price">2,100 ₸</span>
+                            <span class="menu-portion">6 pcs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="food-card">
+                    <div class="food-image-box">
+                        <span class="food-tag">SIDE DISH</span>
+                        <img src="images/fries.avif"
+                             alt="Cajun Fries">
+                    </div>
+
+                    <div class="food-card-body">
+                        <h3>Cajun Fries</h3>
+                        <p>
+                            Crispy golden fries seasoned with
+                            our special Cajun-inspired spices.
+                        </p>
+
+                        <div class="food-card-bottom">
+                            <span class="price">900 ₸</span>
+                            <span class="menu-portion">Regular</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="food-card">
+                    <div class="food-image-box">
+                        <span class="food-tag">CLASSIC</span>
+                        <img src="images/biscuit.avif"
+                             alt="Classic Biscuit">
+                    </div>
+
+                    <div class="food-card-body">
+                        <h3>Classic Biscuit</h3>
+                        <p>
+                            A soft, buttery biscuit with a
+                            golden crust. Perfect with chicken.
+                        </p>
+
+                        <div class="food-card-bottom">
+                            <span class="price">450 ₸</span>
+                            <span class="menu-portion">1 pc</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="food-card">
+                    <div class="food-image-box">
+                        <span class="food-tag">OUR FAVORITE</span>
+                        <img src="images/pop.avif"
+                             alt="Popeyes Special Chicken">
+                    </div>
+
+                    <div class="food-card-body">
+                        <h3>Popeyes Special</h3>
+                        <p>
+                            Our delicious Louisiana-style
+                            chicken with a crispy golden coating.
+                        </p>
+
+                        <div class="food-card-bottom">
+                            <span class="price">From 2,500 ₸</span>
+                            <span class="menu-portion">Special</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PRICE LIST -->
+<section class="section-padding menu-table-section">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-label">QUICK OVERVIEW</span>
+            <h2 class="section-title">Our Price List</h2>
+            <p class="section-description">
+                Check out our sample menu prices.
+            </p>
+        </div>
+
+        <div class="table-responsive menu-table-wrapper">
+            <table class="table table-hover align-middle mb-0">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Portion</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chicken Sandwich Combo</td>
+                        <td>Large</td>
+                        <td>3,200 ₸</td>
+                    </tr>
+                    <tr>
+                        <td>Spicy Chicken Tenders</td>
+                        <td>5 pcs</td>
+                        <td>2,400 ₸</td>
+                    </tr>
+                    <tr>
+                        <td>Chicken Wings</td>
+                        <td>6 pcs</td>
+                        <td>2,100 ₸</td>
+                    </tr>
+                    <tr>
+                        <td>Cajun Fries</td>
+                        <td>Regular</td>
+                        <td>900 ₸</td>
+                    </tr>
+                    <tr>
+                        <td>Classic Biscuit</td>
+                        <td>1 pc</td>
+                        <td>450 ₸</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="text-center text-muted mt-3">
+            *Prices are examples for this student project.
+        </p>
+
+    </div>
+</section>
+
+<!-- OFFER SECTION -->
+<section class="offer-section">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+                <span class="offer-label">LOVE THAT CHICKEN</span>
+                <h2>HUNGRY FOR<br>SOMETHING GOOD?</h2>
+                <p>
+                    Discover the flavor that makes
+                    every meal special.
+                </p>
+                <a href="contact.html" class="btn btn-light btn-lg">
+                    Get in Touch →
+                </a>
+            </div>
+
+            <div class="col-lg-4 text-center">
+                <img src="images/wings.avif"
+                     alt="Delicious Chicken Wings"
+                     class="img-fluid offer-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-md-5">
+                <h3 class="footer-brand">POPEYES.</h3>
+                <p>
+                    A student web development project
+                    inspired by Louisiana-style chicken.
+                </p>
+            </div>
+
+            <div class="col-md-3">
+                <h4>Explore</h4>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="col-md-4">
+                <h4>Our Team</h4>
+                <p>Tumenbay Aidana</p>
+                <p>Mussabekuly Kuanysh</p>
+                <p>Group: SE-2511</p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="text-center mb-0">
+            © 2026 Popeyes Student Project.
+            Educational purposes only.
+            Team Members: Tumenbay Aidana and Mussabekuly Kuanysh.
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
+
